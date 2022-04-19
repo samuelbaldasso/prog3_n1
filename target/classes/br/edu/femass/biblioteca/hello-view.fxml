@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -12,11 +15,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.femass.biblioteca.gui.BibliotecaController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.femass.biblioteca.gui.BibliotecaController">
    <children>
       <TabPane prefHeight="780.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-            <Tab text="LIVROS">
+            <Tab text="BOOKS">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -24,31 +27,28 @@
                            <children>
                               <VBox prefHeight="753.0" prefWidth="512.0">
                                  <children>
-                                    <ListView fx:id="LstLiv" onKeyPressed="#LstLiv_KeyPressed" onMouseClicked="#LstLiv_MouseClicked" prefHeight="650.0" prefWidth="512.0" />
-                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
-                                       <children>
-                                          <Button fx:id="BtnLivIncluir" mnemonicParsing="false" onAction="#BtnLivIncluir_Action" text="Incluir" />
-                                          <Button fx:id="BtnLivExcluir" mnemonicParsing="false" onAction="#BtnLivExcluir_Action" text="Excluir" />
-                                       </children>
-                                    </HBox>
+                                    <ListView fx:id="LstLiv" onKeyPressed="#LstLiv_KeyPressed" onMouseClicked="#LstLiv_MouseClicked" prefHeight="832.0" prefWidth="512.0" />
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0" />
                                  </children>
                               </VBox>
                               <Pane prefHeight="743.0" prefWidth="512.0">
                                  <children>
-                                    <TextField fx:id="TxtLivNome" disable="true" layoutX="182.0" layoutY="60.0" prefHeight="25.0" prefWidth="282.0" />
-                                    <Label layoutX="63.0" layoutY="64.0" text="Nome" />
-                                    <Label layoutX="62.0" layoutY="120.0" text="Edição" />
-                                    <TextField fx:id="TxtLivEdicao" disable="true" layoutX="182.0" layoutY="116.0" prefHeight="25.0" prefWidth="282.0" />
-                                    <Label layoutX="60.0" layoutY="180.0" text="Gênero" />
-                                    <ComboBox fx:id="CboLivGenero" disable="true" layoutX="182.0" layoutY="176.0" prefHeight="25.0" prefWidth="282.0" />
-                                    <Label layoutX="64.0" layoutY="244.0" text="Autor" />
-                                    <TextField fx:id="TxtLivAutorNome" disable="true" layoutX="182.0" layoutY="240.0" prefHeight="25.0" prefWidth="138.0" text="Nome" />
-                                    <Label layoutX="61.0" layoutY="301.0" text="Cópias" />
-                                    <Button fx:id="BtnLivGravar" disable="true" layoutX="413.0" layoutY="687.0" mnemonicParsing="false" onAction="#BtnLivGravar_Action" text="Gravar" />
-                                    <Button fx:id="BtnLivCancelar" disable="true" layoutX="225.0" layoutY="687.0" mnemonicParsing="false" onAction="#BtnLivCancelar_Action" text="Cancelar" />
-                                    <TextField fx:id="TxtLivAutorSobrenome" disable="true" layoutX="331.0" layoutY="240.0" prefHeight="25.0" prefWidth="135.0" text="Sobrenome" />
-                                    <Button fx:id="BtnLivAddCpy" layoutX="182.0" layoutY="297.0" mnemonicParsing="false" onAction="#BtnLivAddCpy_Action" prefHeight="25.0" prefWidth="139.0" text="Adicionar" />
-                                    <Button fx:id="BtnLivRemCpy" layoutX="332.0" layoutY="297.0" mnemonicParsing="false" onAction="#BtnLivRemCpy_Action" prefHeight="25.0" prefWidth="135.0" text="Remover" />
+                                    <TextField fx:id="TxtLivNome" disable="true" layoutX="138.0" layoutY="59.0" prefHeight="31.0" prefWidth="347.0" />
+                                    <Label layoutX="63.0" layoutY="64.0" text="NAME" />
+                                    <Label layoutX="62.0" layoutY="120.0" text="EDITION" />
+                                    <TextField fx:id="TxtLivEdicao" disable="true" layoutX="138.0" layoutY="115.0" prefHeight="31.0" prefWidth="349.0" />
+                                    <Label layoutX="60.0" layoutY="180.0" text="GENRES" />
+                                    <ComboBox fx:id="CboLivGenero" disable="true" layoutX="120.0" layoutY="178.0" prefHeight="31.0" prefWidth="380.0" />
+                                    <Label layoutX="64.0" layoutY="244.0" text="AUTOR" />
+                                    <TextField fx:id="TxtLivAutorNome" disable="true" layoutX="120.0" layoutY="239.0" prefHeight="31.0" prefWidth="151.0" text="INPUT YOUR NAME" />
+                                    <Label layoutX="68.0" layoutY="302.0" text="COPYS" />
+                                    <Button fx:id="BtnLivGravar" disable="true" layoutX="333.0" layoutY="372.0" mnemonicParsing="false" onAction="#BtnLivGravar_Action" prefHeight="31.0" prefWidth="136.0" text="SAVE" />
+                                    <Button fx:id="BtnLivCancelar" disable="true" layoutX="182.0" layoutY="372.0" mnemonicParsing="false" onAction="#BtnLivCancelar_Action" prefHeight="31.0" prefWidth="139.0" text="CANCEL" />
+                                    <TextField fx:id="TxtLivAutorSobrenome" disable="true" layoutX="279.0" layoutY="239.0" prefHeight="31.0" prefWidth="217.0" text="INPUT YOUR SURNAME" />
+                                    <Button fx:id="BtnLivAddCpy" layoutX="182.0" layoutY="297.0" mnemonicParsing="false" onAction="#BtnLivAddCpy_Action" prefHeight="25.0" prefWidth="139.0" text="ADD" />
+                                    <Button fx:id="BtnLivRemCpy" layoutX="332.0" layoutY="297.0" mnemonicParsing="false" onAction="#BtnLivRemCpy_Action" prefHeight="25.0" prefWidth="135.0" text="REMOVE" />
+                                    <Button fx:id="BtnLivIncluir" layoutX="191.0" layoutY="649.0" mnemonicParsing="false" onAction="#BtnLivIncluir_Action" text="INCLUDE" />
+                                    <Button fx:id="BtnLivExcluir" layoutX="401.0" layoutY="649.0" mnemonicParsing="false" onAction="#BtnLivExcluir_Action" text="DELETE" />
                                  </children>
                               </Pane>
                            </children>
@@ -57,7 +57,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="USUÁRIO">
+            <Tab text="USERS">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -65,47 +65,44 @@
                            <children>
                               <VBox prefHeight="753.0" prefWidth="512.0">
                                  <children>
-                                    <ListView fx:id="LstUsu" onKeyPressed="#LstUsu_KeyPressed" onMouseClicked="#LstUsu_MouseClicked" prefHeight="650.0" prefWidth="512.0" />
-                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
-                                       <children>
-                                          <Button fx:id="BtnUsuIncluir" mnemonicParsing="false" onAction="#BtnUsuIncluir_Action" text="Incluir" />
-                                          <Button fx:id="BtnUsuExcluir" mnemonicParsing="false" onAction="#BtnUsuExcluir_Action" text="Excluir" />
-                                       </children>
-                                    </HBox>
+                                    <ListView fx:id="LstUsu" onKeyPressed="#LstUsu_KeyPressed" onMouseClicked="#LstUsu_MouseClicked" prefHeight="833.0" prefWidth="512.0" />
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0" />
                                  </children>
                               </VBox>
                               <Pane prefHeight="753.0" prefWidth="512.0">
                                  <children>
                                     <TabPane prefHeight="752.0" prefWidth="512.0" tabClosingPolicy="UNAVAILABLE">
                                       <tabs>
-                                        <Tab text="Aluno">
+                                        <Tab text="STUDENT">
                                           <content>
                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <Pane prefHeight="724.0" prefWidth="514.0">
+                                                      <Pane layoutX="-1.0" layoutY="-38.0" prefHeight="724.0" prefWidth="514.0">
                                                          <children>
-                                                            <Label layoutX="63.0" layoutY="64.0" text="Nome" />
-                                                            <TextField fx:id="TxtUsuAlunoNome" disable="true" layoutX="182.0" layoutY="60.0" prefHeight="25.0" prefWidth="282.0" />
-                                                            <TextField fx:id="TxtUsuAlunoMatricula" disable="true" layoutX="183.0" layoutY="126.0" prefHeight="25.0" prefWidth="282.0" />
-                                                            <Label layoutX="65.0" layoutY="130.0" text="Matrícula" />
-                                                            <Button fx:id="BtnUsuAlunoGravar" disable="true" layoutX="413.0" layoutY="658.0" mnemonicParsing="false" onAction="#BtnUsuAlunoGravar_Action" text="Gravar" />
-                                                            <Button fx:id="BtnUsuAlunoCancelar" disable="true" layoutX="225.0" layoutY="658.0" mnemonicParsing="false" onAction="#BtnUsuAlunoCancelar_Action" text="Cancelar" />
+                                                            <Label layoutX="63.0" layoutY="64.0" text="NAME" />
+                                                            <TextField fx:id="TxtUsuAlunoNome" disable="true" layoutX="137.0" layoutY="59.0" prefHeight="31.0" prefWidth="351.0" />
+                                                            <TextField fx:id="TxtUsuAlunoMatricula" disable="true" layoutX="137.0" layoutY="125.0" prefHeight="31.0" prefWidth="349.0" />
+                                                            <Label layoutX="65.0" layoutY="130.0" text="ID" />
+                                                            <Button fx:id="BtnUsuAlunoGravar" disable="true" layoutX="336.0" layoutY="316.0" mnemonicParsing="false" onAction="#BtnUsuAlunoGravar_Action" prefHeight="31.0" prefWidth="143.0" text="SAVE" />
+                                                            <Button fx:id="BtnUsuAlunoCancelar" disable="true" layoutX="105.0" layoutY="316.0" mnemonicParsing="false" onAction="#BtnUsuAlunoCancelar_Action" prefHeight="31.0" prefWidth="164.0" text="CANCEL" />
+                                                            <Button fx:id="BtnUsuIncluir" layoutX="105.0" layoutY="211.0" mnemonicParsing="false" onAction="#BtnUsuIncluir_Action" prefHeight="31.0" prefWidth="163.0" text="INCLUDE" />
+                                                            <Button fx:id="BtnUsuExcluir" layoutX="336.0" layoutY="211.0" mnemonicParsing="false" onAction="#BtnUsuExcluir_Action" prefHeight="31.0" prefWidth="146.0" text="DELETE" />
                                                          </children>
                                                       </Pane>
                                                    </children>
                                                 </AnchorPane>
                                           </content>
                                         </Tab>
-                                          <Tab text="Professor">
+                                          <Tab text="TEACHER">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <Pane prefHeight="724.0" prefWidth="514.0">
+                                                      <Pane layoutX="-1.0" prefHeight="724.0" prefWidth="514.0">
                                                          <children>
-                                                            <Label layoutX="63.0" layoutY="64.0" text="Nome" />
-                                                            <TextField fx:id="TxtUsuProfessorNome" disable="true" layoutX="182.0" layoutY="60.0" prefHeight="25.0" prefWidth="282.0" />
-                                                            <Button fx:id="BtnUsuProfessorGravar" disable="true" layoutX="413.0" layoutY="658.0" mnemonicParsing="false" onAction="#BtnUsuProfessorGravar_Action" text="Gravar" />
-                                                            <Button fx:id="BtnUsuProfessorCancelar" disable="true" layoutX="225.0" layoutY="658.0" mnemonicParsing="false" onAction="#BtnUsuProfessorCancelar_Action" text="Cancelar" />
+                                                            <Label layoutX="63.0" layoutY="64.0" text="NAME" />
+                                                            <TextField fx:id="TxtUsuProfessorNome" disable="true" layoutX="144.0" layoutY="59.0" prefHeight="31.0" prefWidth="339.0" />
+                                                            <Button fx:id="BtnUsuProfessorGravar" disable="true" layoutX="334.0" layoutY="256.0" mnemonicParsing="false" onAction="#BtnUsuProfessorGravar_Action" prefHeight="31.0" prefWidth="142.0" text="SAVE" />
+                                                            <Button fx:id="BtnUsuProfessorCancelar" disable="true" layoutX="144.0" layoutY="256.0" mnemonicParsing="false" onAction="#BtnUsuProfessorCancelar_Action" prefHeight="31.0" prefWidth="157.0" text="CANCEL" />
                                                          </children>
                                                       </Pane>
                                                    </children>
@@ -122,7 +119,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="EMPRÉSTIMOS">
+            <Tab text="LOANS">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -133,24 +130,22 @@
                                     <ListView fx:id="LstEmp" prefHeight="650.0" prefWidth="512.0" />
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
                                        <children>
-                                          <Button fx:id="BtnEmpIncluir" mnemonicParsing="false" onAction="#BtnEmpIncluir_Action" text="Incluir" />
-                                          <Button fx:id="BtnEmpExcluir" mnemonicParsing="false" onAction="#BtnEmpExcluir_Action" text="Excluir" />
+                                          <Button fx:id="BtnEmpIncluir" mnemonicParsing="false" onAction="#BtnEmpIncluir_Action" text="INCLUDE" />
+                                          <Button fx:id="BtnEmpExcluir" mnemonicParsing="false" onAction="#BtnEmpExcluir_Action" text="DELETE" />
                                        </children>
                                     </HBox>
                                  </children>
                               </VBox>
                               <Pane prefHeight="743.0" prefWidth="512.0">
                                  <children>
-                                    <TextField fx:id="TxtEmpUsuario" disable="true" editable="false" layoutX="182.0" layoutY="60.0" prefHeight="25.0" prefWidth="282.0" />
-                                    <Label layoutX="63.0" layoutY="64.0" text="Usuário" />
-                                    <Label layoutX="62.0" layoutY="120.0" text="Livro" />
-                                    <TextField fx:id="TxtEmpLivro" disable="true" editable="false" layoutX="182.0" layoutY="116.0" prefHeight="25.0" prefWidth="282.0" />
-                                    <Button fx:id="BtnEmpGravar" disable="true" layoutX="413.0" layoutY="687.0" mnemonicParsing="false" onAction="#BtnEmpGravar_Action" text="Gravar" />
-                                    <Button fx:id="BtnEmpCancelar" disable="true" layoutX="225.0" layoutY="687.0" mnemonicParsing="false" onAction="#BtnEmpCancelar_Action" text="Cancelar" />
+                                    <TextField fx:id="TxtEmpUsuario" disable="true" editable="false" layoutX="122.0" layoutY="31.0" prefHeight="25.0" prefWidth="282.0" />
+                                    <TextField fx:id="TxtEmpLivro" disable="true" editable="false" layoutX="122.0" layoutY="82.0" prefHeight="25.0" prefWidth="282.0" />
+                                    <Button fx:id="BtnEmpGravar" disable="true" layoutX="335.0" layoutY="689.0" mnemonicParsing="false" onAction="#BtnEmpGravar_Action" prefHeight="31.0" prefWidth="87.0" text="SAVE" />
+                                    <Button fx:id="BtnEmpCancelar" disable="true" layoutX="122.0" layoutY="689.0" mnemonicParsing="false" onAction="#BtnEmpCancelar_Action" prefHeight="31.0" prefWidth="102.0" text="CANCEL" />
                                     <ListView fx:id="LstUsu1" disable="true" layoutY="188.0" onKeyPressed="#LstUsu1_KeyPressed" onMouseClicked="#LstUsu1_MouseClicked" prefHeight="200.0" prefWidth="512.0" />
-                                    <ListView fx:id="LstLiv1" disable="true" layoutY="432.0" onKeyPressed="#LstLiv1_KeyPressed" onMouseClicked="#LstLiv1_MouseClicked" prefHeight="200.0" prefWidth="512.0" />
-                                    <Label layoutX="243.0" layoutY="402.0" text="LIVRO" />
-                                    <Label layoutX="235.0" layoutY="160.0" text="USUÁRIO" />
+                                    <ListView fx:id="LstLiv1" disable="true" layoutY="432.0" onKeyPressed="#LstLiv1_KeyPressed" onMouseClicked="#LstLiv1_MouseClicked" prefHeight="219.0" prefWidth="512.0" />
+                                    <Label layoutX="224.0" layoutY="402.0" text="BOOKS LIST" />
+                                    <Label layoutX="226.0" layoutY="160.0" text="USERS LIST" />
                                  </children>
                               </Pane>
                            </children>
