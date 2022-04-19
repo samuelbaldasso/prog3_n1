@@ -1,0 +1,22 @@
+<list>
+  <br.edu.femass.biblioteca.model.Aluno>
+    <nome>Samuel</nome>
+    <prazoDevolucao>5</prazoDevolucao>
+    <emprestimos/>
+    <count>0</count>
+    <matricula>1701230013</matricula>
+  </br.edu.femass.biblioteca.model.Aluno>
+  <br.edu.femass.biblioteca.model.Professor>
+    <nome>Bruno</nome>
+    <prazoDevolucao>30</prazoDevolucao>
+    <emprestimos/>
+    <count>0</count>
+  </br.edu.femass.biblioteca.model.Professor>
+  <br.edu.femass.biblioteca.model.Aluno>
+    <nome>xcscx</nome>
+    <prazoDevolucao>5</prazoDevolucao>
+    <emprestimos/>
+    <count>0</count>
+    <matricula>12131323</matricula>
+  </br.edu.femass.biblioteca.model.Aluno>
+</list>

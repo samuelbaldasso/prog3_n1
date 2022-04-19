@@ -1,0 +1,56 @@
+<list>
+  <br.edu.femass.biblioteca.model.Livro>
+    <nome>Samuel</nome>
+    <edicao>200</edicao>
+    <genero>Aventura</genero>
+    <autores>
+      <br.edu.femass.biblioteca.model.Autor>
+        <nome>Charles</nome>
+        <sobrenome>Darwin</sobrenome>
+      </br.edu.femass.biblioteca.model.Autor>
+    </autores>
+    <copias>
+      <br.edu.femass.biblioteca.model.Copia>
+        <codigo>1</codigo>
+        <fixo>true</fixo>
+        <disponivel>false</disponivel>
+      </br.edu.femass.biblioteca.model.Copia>
+    </copias>
+  </br.edu.femass.biblioteca.model.Livro>
+  <br.edu.femass.biblioteca.model.Livro>
+    <nome>O brabo</nome>
+    <edicao>20</edicao>
+    <genero>Terror</genero>
+    <autores>
+      <br.edu.femass.biblioteca.model.Autor>
+        <nome>Samuel </nome>
+        <sobrenome>B</sobrenome>
+      </br.edu.femass.biblioteca.model.Autor>
+    </autores>
+    <copias>
+      <br.edu.femass.biblioteca.model.Copia>
+        <codigo>1</codigo>
+        <fixo>true</fixo>
+        <disponivel>false</disponivel>
+      </br.edu.femass.biblioteca.model.Copia>
+    </copias>
+  </br.edu.femass.biblioteca.model.Livro>
+  <br.edu.femass.biblioteca.model.Livro>
+    <nome>xcxc</nome>
+    <edicao>23323</edicao>
+    <genero>Drama</genero>
+    <autores>
+      <br.edu.femass.biblioteca.model.Autor>
+        <nome>dssdsa</nome>
+        <sobrenome>sdsdds</sobrenome>
+      </br.edu.femass.biblioteca.model.Autor>
+    </autores>
+    <copias>
+      <br.edu.femass.biblioteca.model.Copia>
+        <codigo>3</codigo>
+        <fixo>true</fixo>
+        <disponivel>false</disponivel>
+      </br.edu.femass.biblioteca.model.Copia>
+    </copias>
+  </br.edu.femass.biblioteca.model.Livro>
+</list>
